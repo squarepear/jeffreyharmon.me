@@ -1,9 +1,7 @@
 <template lang="pug">
 .home
-  h1 Hello, I'm Jeffrey
+  h1#intro Hello, I'm Jeffrey
   h3#traits College Student & Full-Stack Developer
-  h4
-    router-link(to="/about") More about me
 </template>
 
 <script lang="ts">
@@ -15,7 +13,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-#traits {
-
+#intro {
+  font-weight: bold;
 }
 </style>
