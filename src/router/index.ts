@@ -1,9 +1,11 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+
 import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    alias: '/home',
     name: 'Home',
     component: Home
   },
@@ -13,15 +15,8 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
-  },
-  {
-    path: '/404',
-    alias: '/:catchAll(.*)',
-    name: 'NotFound',
-    component: () => import(/* webpackChunkName: "notfound" */ '../views/NotFound.vue')
+    path: '/:catchAll(.*)',
+    redirect: '/'
   }
 ]
 
