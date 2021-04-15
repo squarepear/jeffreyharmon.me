@@ -1,7 +1,7 @@
 <template lang="pug">
 .home
   h1#intro Hello, I'm Jeffrey
-  h3#traits College Student & Full-Stack Developer
+  h3#traits College Student & Developer
 </template>
 
 <script lang="ts">
